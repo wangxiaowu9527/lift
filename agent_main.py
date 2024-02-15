@@ -530,6 +530,8 @@ def task(node_name_dir: str):
                     if os.path.isfile(in_file_lock):
                         agent_logger.info('Removing tmp lock file: {}.'.format(in_file_lock))
                         os.remove(in_file_lock)
+                    agent_logger.info('Sleep {} seconds for stay.'.format(FLOOR_OPEN_STAY_TIME))
+                    time.sleep(FLOOR_OPEN_STAY_TIME)  # 模拟开门
 
     except KeyboardInterrupt:
         logger.info('Node_name_dir: {}, bye ~'.format(node_name_dir))
