@@ -1,0 +1,26 @@
+### 以下参数均可按需更改
+
+# 运行端口
+RUN_PORT = 5000
+
+
+# 总楼层[提示: 楼层号0不存在,下同]
+TOTAL_FLOORS = {
+    'start': -4,
+    'end': 33
+}
+# 节点实例
+# name: 名称编号, start和end分别代表可达楼层号范围, mode:楼层号类型 分三类: 1:连续层 2:偶数层 3:奇数层, is_on: 是否可用
+NODES = [
+    {'name': 'A', 'start': -4, 'end': 22, 'mode': 1, 'is_on': True},
+    {'name': 'B', 'start': -4, 'end': 22, 'mode': 1, 'is_on': True},
+    {'name': 'C', 'start': 23, 'end': 33, 'mode': 2, 'is_on': True},
+    {'name': 'D', 'start': 23, 'end': 33, 'mode': 2, 'is_on': True},
+    {'name': 'E', 'start': 23, 'end': 33, 'mode': 3, 'is_on': True},
+    {'name': 'F', 'start': 23, 'end': 33, 'mode': 3, 'is_on': True},
+]
+
+# 模拟每层运行花费时间，单位秒
+FLOOR_EACH_RUN_TIME = 2
+# 模拟每层开门后停留时间，单位秒
+FLOOR_OPEN_STAY_TIME = 10
